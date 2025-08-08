@@ -1,0 +1,32 @@
+{
+  "includes": [
+    "package.json",
+    "tsconfig.json",
+    "rolldown.config.js",
+    "src/**/*.{js,ts}",
+  ],
+  "excludes": [
+    "**/node_modules",
+    "**/*-lock.json"
+  ],
+  "imporg": {
+    "aliases": ["^~/", "^@/", "^@citlali/"],
+  },
+  "typescript": {
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "semiColons": "always",
+    "quoteStyle": "preferSingle",
+    "jsx.quoteStyle": "preferDouble",
+    "quoteProps": "consistent",
+    "arrowFunction.useParentheses": "force",
+    "functionExpression.spaceBeforeParentheses": true,
+    "jsxOpeningElement.bracketPosition": "sameLine",
+    "jsxSelfClosingElement.bracketPosition": "nextLine"
+  },
+  "plugins": [
+    "https://plugins.dprint.dev/balthild/imporg-0.1.6.wasm",
+    "https://plugins.dprint.dev/typescript-0.93.3.wasm",
+    "https://plugins.dprint.dev/json-0.19.4.wasm",
+  ]
+}
