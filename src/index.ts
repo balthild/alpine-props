@@ -10,7 +10,7 @@ export default function props(Alpine: Alpine) {
     const $props = initPropsObject(Alpine, el);
 
     effect(() => {
-      const field = value.replace(/-./g, (x) => x[1].toUpperCase());
+      const field = value.toLowerCase().replace(/-[^-]/g, (x) => x[1].toUpperCase());
       const result = Alpine.evaluate(el.parentElement!, expression);
       $props[field] = result;
     });
