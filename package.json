@@ -4,9 +4,9 @@
   "license": "MPL-2.0",
   "packageManager": "yarn@4.6.0",
   "scripts": {
-    "dev": "rolldown -c rolldown.config.ts -w",
-    "build": "rolldown -c rolldown.config.ts",
-    "serve": "http-server",
+    "release": "yarn run fmt && yarn run build && release-it",
+    "dev": "vite dev",
+    "build": "vite build",
     "fmt": "dprint fmt && syncpack format"
   },
   "type": "module",
@@ -20,8 +20,8 @@
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.9",
     "dprint": "^0.50.1",
-    "http-server": "^14.1.1",
-    "rolldown": "1.0.0-beta.31",
+    "release-it": "^19.0.4",
+    "rolldown-vite": "^7.1.0",
     "syncpack": "^13.0.4"
   },
   "peerDependencies": {

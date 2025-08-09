@@ -2,6 +2,7 @@
   "includes": [
     "package.json",
     "tsconfig.json",
+    "vite.config.ts",
     "rolldown.config.js",
     "src/**/*.{js,ts}",
   ],

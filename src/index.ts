@@ -1,3 +1,4 @@
+import { readonly } from '@vue/reactivity';
 import type { Alpine } from 'alpinejs';
 
 export default function props(Alpine: Alpine) {
@@ -24,7 +25,11 @@ function initPropsObject(Alpine: Alpine, el: Element) {
   }
 
   const $props = Alpine.reactive({});
-  Alpine.addScopeToNode(el, { $props });
   propsObjects.set(el, $props);
+
+  Alpine.addScopeToNode(el, {
+    $props: readonly($props),
+  });
+
   return $props;
 }
