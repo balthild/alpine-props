@@ -1,0 +1,14 @@
+{
+  "include": ["./src"],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
+}

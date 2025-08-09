@@ -1,6 +1,8 @@
-import { defineConfig } from 'rolldown-vite';
+import { defineConfig } from 'vite';
+import dts from 'unplugin-dts/vite';
 
 export default defineConfig({
+  plugins: [dts()],
   build: {
     minify: false,
     emptyOutDir: true,
@@ -8,7 +10,7 @@ export default defineConfig({
       entry: ['src/index.ts'],
       formats: ['es'],
     },
-    rolldownOptions: {
+    rollupOptions: {
       external: ['alpinejs', '@vue/reactivity'],
     },
   },

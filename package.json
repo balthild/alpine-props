@@ -1,7 +1,12 @@
 {
   "name": "alpine-props",
   "version": "0.1.1",
+  "description": "Component props for Alpine.js",
   "license": "MPL-2.0",
+  "keywords": [
+    "alpinejs",
+    "props"
+  ],
   "packageManager": "yarn@4.6.0",
   "scripts": {
     "release": "yarn run fmt && yarn run build && release-it",
@@ -11,9 +16,8 @@
   },
   "type": "module",
   "main": "./dist/index.js",
-  "types": "./src/index.ts",
+  "types": "./dist/index.d.ts",
   "files": [
-    "./src",
     "./dist"
   ],
   "devDependencies": {
@@ -21,8 +25,10 @@
     "alpinejs": "^3.14.9",
     "dprint": "^0.50.1",
     "release-it": "^19.0.4",
-    "rolldown-vite": "^7.1.0",
-    "syncpack": "^13.0.4"
+    "syncpack": "^13.0.4",
+    "typescript": "^5.9.2",
+    "unplugin-dts": "1.0.0-beta.6",
+    "vite": "^7.1.1"
   },
   "peerDependencies": {
     "alpinejs": "^3"
