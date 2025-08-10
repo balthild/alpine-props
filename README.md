@@ -27,7 +27,7 @@ document.addEventListener('alpine:init', () => {
 });
 ```
 
-Pass the prop with `x-prop:my-prop-name="value"`, access the prop with `$props.myPropName`.
+Pass the prop to child with `x-prop:my-prop-name="value"`. Access the prop in child with `$props.myPropName`.
 
 ```html
 <div x-data="{ count: 0 }">
