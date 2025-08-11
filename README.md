@@ -4,7 +4,21 @@ An alpine plugin that adds props functionality. Useful for creating reusable com
 
 ## Installation
 
+From CDN:
+
+```html
+<script type="importmap">
+    {
+        "imports": {
+            "alpine-props": "https://unpkg.com/alpine-props"
+        }
+    }
+</script>
 ```
+
+From package manager:
+
+```bash
 # npm
 npm install alpine-props
 
