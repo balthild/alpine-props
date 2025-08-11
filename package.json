@@ -21,7 +21,6 @@
     "./dist"
   ],
   "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.9",
     "dprint": "^0.50.1",

@@ -1,6 +1,5 @@
-import dts from 'unplugin-dts/vite';
-import terser from '@rollup/plugin-terser';
 import { defineConfig } from 'vite';
+import dts from 'unplugin-dts/vite';
 
 export default defineConfig({
   plugins: [dts()],
@@ -9,20 +8,10 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: ['src/index.ts'],
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['alpinejs', '@vue/reactivity'],
-      output: [
-        {
-          format: 'es',
-          entryFileNames: 'index.js',
-        },
-        {
-          format: 'es',
-          entryFileNames: 'index.min.js',
-          plugins: [terser()],
-        },
-      ],
     },
   },
 });
