@@ -10,7 +10,7 @@ From CDN:
 <script type="importmap">
     {
         "imports": {
-            "alpine-props": "https://unpkg.com/alpine-props"
+            "alpine-props": "https://esm.sh/alpine-props"
         }
     }
 </script>
